@@ -16,19 +16,20 @@ namespace TaskManagerFlow.Models
         public String Threads { get; set; }
         public String UserName { get; set; }
         public String Path { get; set; }
-        public String FileName { get; set; }
+      
         public DateTime RunDate { get; set; }
 
-        Process(DateTime runDate, string fileName, string path, string userName, string threads, bool active, string processId, string name)
+        public Process(DateTime runDate, string path, string userName, string threads, bool active, string processId, string name, string processRam)
         {
             RunDate = runDate;
-            FileName = fileName;
+           
             Path = path;
             UserName = userName;
             Threads = threads;
             Active = active;
             ProcessId = processId;
             Name = name;
+            ProcessRam = processRam;
         }
 
     }
